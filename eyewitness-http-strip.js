@@ -1,17 +1,15 @@
 var x = document.querySelectorAll("a");
 var myarray = []
-var str1 = String
+
 for (var i=0; i<x.length; i++){
 
-var nametext = x[i].textContent;
-var cleantext = nametext.replace(/\s+/g, ' ').trim();
-var cleanlink = x[i].href;
-
-myarray.push([cleantext,cleanlink]);
-
+    var nametext = x[i].textContent;
+    var cleantext = nametext.replace(/\s+/g, ' ').trim();
+    myarray.push([cleantext]);
 };
+
 function make_table() {
-    var table = '<table><thead><th>Name</th></thead><tbody>';
+    var table = '<table><thead><th>Findings</th></thead><tbody>';
    for (var i=0; i<myarray.length; i++) {
         str1 = myarray[i][0]
         if (str1.startsWith('http')) {
